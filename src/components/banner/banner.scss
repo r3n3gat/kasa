@@ -1,0 +1,54 @@
+@import '../../sass/base/main.scss';
+
+.banner {
+    max-width: 1240px;
+    height: 111px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background-position: center;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @include tablette {
+    margin-bottom: 50px;
+    height: 223px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+
+    @include desktop {
+       margin-bottom: 50px;
+       height: 223px;
+       margin-left: 100px;
+       margin-right: 100px;
+       margin-top: 30px;
+    }
+
+    @include large-desktop {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    }
+}
+
+.banner-text {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 30px;
+    font-family: "montserrat";
+    font-weight: 400;
+    padding-top: 30px;
+
+    @include tablette {
+            padding-top: 80px;
+            font-size: 48px;
+    }
+    @include desktop {
+             font-size: 48px;
+             margin-top: 0;
+         }
+
+}

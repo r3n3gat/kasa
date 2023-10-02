@@ -1,0 +1,52 @@
+@import '../../sass/base/main.scss';
+
+.collapse {
+    background-color: $color-secondary;
+    max-width: 1100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+
+    @include tablette {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    @include desktop {
+        margin: 0 auto;
+    }
+
+    &_title {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px;
+        color: $color-primary;
+        font-weight: 500;
+        .arrow {
+        max-height: 12px;
+        padding-top: 10px;
+        }
+    }
+
+    &_content {
+        height: 0;
+        opacity: 0;
+        transition: height 0.3s ease-out, opacity 0.3s ease-out
+}
+
+        &.open {
+            .collapse_content {
+                padding: 20px;
+                background-color: $color-tertiary;
+                color: $color-secondary;
+                height: auto;
+                opacity: 1;
+                line-height: 24px;
+                transition: height 0.3s ease-out, opacity 0.3s ease-out;
+            }
+        }
+
+}

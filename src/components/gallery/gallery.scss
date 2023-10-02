@@ -1,0 +1,30 @@
+@import '../../sass/base/main.scss';
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @include tablette {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 50px;
+    gap: 50px;
+    background-color: $color-tertiary;
+    }
+
+    @include desktop {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 50px;
+    gap: 30px;
+    background-color: $color-tertiary;
+    }
+
+}

@@ -1,0 +1,48 @@
+@import '../../sass/base/main.scss';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0 50px 20px;
+
+    @include desktop {
+        margin: 50px 100px 0px 100px;
+    }
+
+img {
+    max-width: 100px;
+
+    @include desktop {
+        max-width: 150px;
+        cursor: pointer;
+        }
+    }
+}
+
+.nav {
+    display: inline;
+    cursor: pointer;
+    color: $color-secondary;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 20px;
+    text-transform: uppercase;
+
+    &:hover{
+        text-decoration: underline solid $color-secondary;
+    }
+
+    @include tablette {
+        font-size: 24px;
+        text-transform: none;
+        margin-left: 50px;
+    }
+
+    @include desktop {
+            
+        font-size: 24px;  
+        text-transform: none;
+        margin-left: 50px;
+    }
+}
