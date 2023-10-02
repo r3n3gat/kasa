@@ -7,16 +7,19 @@
     cursor: pointer;
     z-index: 30;
     border-radius: 5px;
+    max-width: 1223px;
+
     @include desktop {
             min-height: 50px;
     }
     &_content {
-            max-height: 0;
+            height: 0;
             opacity: 0;
         }
     
         &.open {
             .collapse_content {
+                height: auto;
                 padding: 20px;
                 background-color: $color-tertiary;
                 color: $color-secondary;
@@ -31,9 +34,6 @@
         margin-left: 20px;
         margin-right: 20px;
     }
-    @include desktop {
-        margin: 0 auto;
-        }
     
     &_title {
         background-color: $color-secondary;
@@ -68,7 +68,10 @@
         gap: 50px;
         margin-right: 100px;
         &_item {
+            width: 100%;
+            @include desktop {
                 width: 100%;
-                }
+            }
+        }
     }
 }
