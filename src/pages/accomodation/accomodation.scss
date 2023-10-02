@@ -1,0 +1,26 @@
+@import '../../sass/base/main.scss';
+
+.accomodation {
+    color: $color-secondary;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.container-collapse {
+    margin-left: 0;
+    width: 550px;
+
+}
+
+
+.tag {
+    background-color: $color-secondary;
+    color: white;
+    border-radius: 10px;
+    height: 25px;
+    border-style: none;
+    min-width: 110px;
+    margin-right: 10px;
+    font-size: 14px;
+
+}

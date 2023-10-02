@@ -10,8 +10,8 @@ export default function Home() {
         <div>
             <Header />
             <Banner imageUrl={bannerImage} showText={true} />
-            <Footer/>
             <Gallery />
+            <Footer/>
         </div>
     );
 }

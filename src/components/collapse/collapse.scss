@@ -1,52 +1,64 @@
 @import '../../sass/base/main.scss';
 
 .collapse {
-    background-color: $color-secondary;
-    max-width: 1100px;
+    background-color: $color-tertiary;
     margin-left: 20px;
     margin-right: 20px;
-    min-height: 50px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    max-width: 1100px;
+    min-height: 30px;
     cursor: pointer;
-
-    @include tablette {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
+    z-index: 30;
+    border-radius: 5px;
     @include desktop {
-        margin: 0 auto;
+            min-height: 50px;
     }
-
-    &_title {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 15px;
-        color: $color-primary;
-        font-weight: 500;
-        .arrow {
-        max-height: 12px;
-        padding-top: 10px;
-        }
-    }
-
     &_content {
-        height: 0;
-        opacity: 0;
-        transition: height 0.3s ease-out, opacity 0.3s ease-out
-}
-
+            max-height: 0;
+            opacity: 0;
+        }
+    
         &.open {
             .collapse_content {
                 padding: 20px;
                 background-color: $color-tertiary;
                 color: $color-secondary;
-                height: auto;
+                max-height: 300px;
                 opacity: 1;
                 line-height: 24px;
-                transition: height 0.3s ease-out, opacity 0.3s ease-out;
+                transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+                border-radius: 5px;
             }
         }
-
+    @include tablette {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    @include desktop {
+        margin: 0 auto;
+        }
+    
+    &_title {
+        min-height: 30px;
+        background-color: $color-secondary;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px;
+        color: $color-primary;
+        font-weight: 500;
+        margin-bottom: 0;
+        margin-top: 20px;
+        .arrow {
+        margin-top: 8px;
+        max-height: 12px;
+        transition: transform 0.5s ease-in-out;
+        &.open {
+                transform: rotate(180deg);
+                margin-top: 8px;
+            }
+        }
+    }
+}
+.accomodation-collapse {
+    width: 550px;
 }

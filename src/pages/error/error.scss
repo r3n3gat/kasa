@@ -2,16 +2,26 @@
 
 .error {
     color: $color-secondary;
-    font-size: 288px;
+    font-size: 96px;
     text-align: center;
     margin: 50px;
+    font-weight: 700;
+
+    @include desktop {
+    font-size: 288px;
+    }
 }
 
 .error-text {
     color: $color-secondary;
-    font-size: 36px;
+    font-size: 18px;
     text-align: center;
     margin-bottom: 100px;
+    font-weight: 500;
+
+    @include desktop {
+    font-size: 36px;
+    }
 }
 
 .error-back {
