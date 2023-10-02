@@ -1,13 +1,44 @@
-@import "../../sass/main.scss";
+@import '../../sass/base/main.scss';
 
 .carrousel {
+    display: flex;
+    position: relative;
     width: 100%;
     height: 255px;
-    display: flex;
     border-radius: 25px;
     background-size: cover;
-    background-color: black;
+    background-position: center;
+    color: white;
     @include desktop {
         height: 415px;
+    }
+
+&_arrow_right {
+    position: absolute;
+    top: 45%;
+    height: 15%;
+    right: 5px;
+    @include desktop {
+        width: 96px;
+        height: 96px;
+    }
+}
+&_arrow_left {
+    position: absolute;
+    top: 45%;
+    height: 15%;
+        @include desktop {
+            width: 96px;
+            height: 96px;
+            }
+}
+}
+
+.count {
+    position: absolute;
+    bottom: 5px;
+    left: 40%;
+    @include desktop {
+        left: 50%;
     }
 }

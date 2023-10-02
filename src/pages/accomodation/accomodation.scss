@@ -1,26 +1,86 @@
 @import '../../sass/base/main.scss';
 
 .accomodation {
+    margin: 20px;
     color: $color-secondary;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
     margin-left: 100px;
-    margin-top: 100px;
+    margin-top: 50px;
+
+
+    &_title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;   
+        justify-content: space-between;
+    }
+    &_host {
+        display: flex;
+        align-items: center;
+        margin-right: 100px;
+        }
+    }
 }
+.picture {
+            border-radius: 50%;
+            margin-left: 10px;
+            width: 64px;
+        }
 
-.container-collapse {
-    margin-left: 0;
-    width: 550px;
+.tag-container {    
 
+     @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        
+    }
 }
 
 
 .tag {
+    order: 2;
     background-color: $color-secondary;
     color: white;
-    border-radius: 10px;
-    height: 25px;
+    border-radius: 5px;
+    height: 18px;
     border-style: none;
-    min-width: 110px;
-    margin-right: 10px;
-    font-size: 14px;
+    font-size: 10px;
+    margin-right: 5px;
+    min-width: 85px;
 
+    @include desktop {
+    min-width: 110px;
+    height: 25px;
+    font-size: 14px;
+    margin-right: 10px;
+    }
+}
+
+.stars {
+    img {
+        height: 24px;
+        margin-top: 20px;
+    }
+    @include desktop {
+        float: right;
+        margin-right: 100px;
+    }
+}
+
+h1 {
+    font-size: 18px;
+    @include desktop {
+    font-size: 36px;
+    }
+}
+
+.container-collapse {
+    @include desktop {
+    margin-right: 100px;
+
+    }
 }
