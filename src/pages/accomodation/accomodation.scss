@@ -16,27 +16,45 @@
         flex-direction: row;
         align-items: center;   
         justify-content: space-between;
+        margin: 0;
     }
-    &_host {
-        display: flex;
-        align-items: center;
-        margin-right: 100px;
-        }
+
     }
 }
+
+.host-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.accomodation_host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include desktop {
+        margin-right: 0;
+    }
+}
+
+
 .picture {
-            border-radius: 50%;
-            margin-left: 10px;
-            width: 64px;
-        }
+    border-radius: 50%;
+    margin-left: 10px;
+    width: 32px;
+    @include desktop {
+        width: 64px;
+    }
+}
 
-.tag-container {    
-
-     @include desktop {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        
+.host-container {    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include desktop {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
     }
 }
 
@@ -63,11 +81,10 @@
 .stars {
     img {
         height: 24px;
-        margin-top: 20px;
     }
     @include desktop {
-        float: right;
-        margin-right: 100px;
+        margin-top: 0;
+        margin-bottom: 20px;
     }
 }
 
@@ -75,6 +92,7 @@ h1 {
     font-size: 18px;
     @include desktop {
     font-size: 36px;
+    margin-bottom: 0;
     }
 }
 
@@ -83,4 +101,16 @@ h1 {
     margin-right: 100px;
 
     }
+}
+
+.info-container {
+    @include desktop {
+     display: flex;
+     justify-content: space-between;
+    }
+}
+
+.location-container {
+    display: flex;
+    flex-direction: column;
 }
